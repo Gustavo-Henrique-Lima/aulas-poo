@@ -7,42 +7,22 @@ public class Questao3Lista3 {
 		int [][] matriz2={{10,1},
 		  		  {3,5},
 		          {0,21}};
-		int qt_linhas_matriz1=0;
-		int qt_colunas_matriz1=0;
-		int qt_linhas_matriz2=0;
-		int qt_colunas_matriz2=0;
-		for(int linhas=0;linhas<matriz1.length;linhas++) 
-		{
-			qt_linhas_matriz1++;
-		}
-		for(int colunas=0;colunas<matriz1[0].length;colunas++)
-		{
-			qt_colunas_matriz1++;
-		}
-		for(int linhas=0;linhas<matriz2.length;linhas++) 
-		{
-			qt_linhas_matriz2++;
-		}
-		for(int colunas=0;colunas<matriz2[0].length;colunas++)
-		{
-			qt_colunas_matriz2++;
-		}
-		 if(qt_colunas_matriz1==qt_linhas_matriz2)
+		 if(matriz1.length==matriz2[0].length)
 		 {
-			 int [][] resultado= new int [qt_linhas_matriz1][qt_colunas_matriz2];
-			 for(int i=0;i<qt_linhas_matriz1;i++)
+			 int [][] resultado= new int [matriz1.length][matriz2[0].length];
+			 for(int i=0;i<matriz1.length;i++)
 			 {
-				 for(int j=0;j<qt_colunas_matriz2;j++) 
+				 for(int j=0;j<matriz2[0].length;j++) 
 				 {
-					 for(int k=0;k<qt_linhas_matriz2;k++)
+					 for(int k=0;k<matriz2.length;k++)
 					 {
 						 resultado[i][j]+=matriz1[i][j]*matriz2[k][j];
 					 }
 				 }
 			 }
-			 for(int linhas=0;linhas<qt_linhas_matriz1;linhas++)
+			 for(int linhas=0;linhas<matriz1.length;linhas++)
 			 {
-				 for(int colunas=0;colunas<qt_colunas_matriz2;colunas++)
+				 for(int colunas=0;colunas<matriz2[0].length;colunas++)
 				 {
 					 System.out.print(resultado[linhas][colunas]+" ");
 				 }
